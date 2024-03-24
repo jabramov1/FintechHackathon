@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - eDeFICB Platform</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mt-5">Dashboard</h2>
+        <div class="row">
+            <div class="col-12 mt-3">
+                <h4>Welcome, <span id="userName">[User Name]</span>!</h4>
+                <p>Here's a quick overview of your account.</p>
+            </div>
+            <div class="col-md-6 mt-3">
+                <h5>Account Balance</h5>
+                <p>$<span id="accountBalance">[Balance]</span></p>
+            </div>
+            <div class="col-md-6 mt-3">
+                <h5>Recent Transactions</h5>
+                <ul id="recentTransactions">
+                    <!-- Transactions will be added here dynamically -->
+                </ul>
+                <a href="transactions.html" class="btn btn-primary">View All Transactions</a>
+            </div>
+            <div class="col-12 mt-3">
+                <h5>Loan Operations</h5>
+                <a href="requestLoan.html" class="btn btn-info">Request Loan</a>
+                <a href="fundLoan.html" class="btn btn-info">Fund Loan</a>
+                <a href="repayLoan.html" class="btn btn-info">Repay Loan</a>
+            </div>
+        </div>
+        <script src="../js/dashboard.js"></script> <!-- Adjust path if necessary -->
+    </div>

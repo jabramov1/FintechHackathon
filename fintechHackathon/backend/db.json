@@ -1,0 +1,45 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "aa@gmail.com",
+      "password": "aa",
+      "wallet": {
+        "address": "0x1d6AC2ac06c160a400F6279fd63708affFCD13C3",
+        "balance": 568,
+        "transactions": []
+      }
+    },
+    {
+      "id": 2,
+      "email": "ff@gmail.com",
+      "password": "ff",
+      "wallet": {
+        "address": "0x463F99791192A5b23d39e4F2A8760ca2B3412f9C",
+        "balance": 3,
+        "transactions": []
+      }
+    },
+    {
+      "id": 4,
+      "email": "borik@gmail.com",
+      "password": "aa",
+      "wallet": {
+        "address": "0xa866d809e4ec00f7dc44c330d9a9150431d539a1",
+        "balance": 320,
+        "transactions": []
+      }
+    }
+  ],
+  "loanRequests": [
+    {
+      "id": 1,
+      "fromUserId": 2,
+      "toUserId": 1,
+      "amount": 1000,
+      "interestRate": 1,
+      "timeframe": 365,
+      "status": "pending"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Loan - eDeFICB Platform</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mt-5">Request Loan</h2>
+        <form id="loanRequestForm" class="mt-3">
+            <div class="form-group">
+                <label for="targetWalletInput">Target Wallet</label>
+                <input type="text" class="form-control" id="targetWalletInput" placeholder="Enter target wallet address"
+                    required>
+            </div>
+            <div class="form-group">
+                <label for="loanAmountInput">Loan Amount</label>
+                <input type="number" class="form-control" id="loanAmountInput" placeholder="Enter loan amount" required>
+            </div>
+            <div class="form-group">
+                <label for="interestRateInput">Desired Interest Rate (%)</label>
+                <input type="number" class="form-control" id="interestRateInput"
+                    placeholder="Enter desired interest rate" required>
+            </div>
+            <div class="form-group">
+                <label for="timeFrameInput">Timeframe (days)</label>
+                <input type="number" class="form-control" id="timeFrameInput" placeholder="Enter timeframe in days"
+                    required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Loan Request</button>
+        </form>
+    </div>
+
+    <script src="../js/requestLoan.js"></script> <!-- You'll need to create this JS file -->
+</body>
+
+</html>

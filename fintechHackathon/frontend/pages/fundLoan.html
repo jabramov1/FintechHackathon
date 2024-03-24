@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Loan - eDeFICB Platform</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Include Bootstrap CSS for styling if needed -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mt-5">Available Loan Requests</h2>
+        <div id="loanRequestsList" class="mt-3">
+            <!-- Loan requests will be loaded here by JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to retrieve loan requests and display them
+            async function fetchAndDisplayLoanRequests() {
+                try {
+                    const response = await fetch('/api/loan/requests', {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        credentials: 'include', // Necessary for including the session cookie
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch loan requests. Status: ${response.status}`);
+                    }
+
+                    const loanRequests = await response.json();
+                    const loanRequestsList = document.getElementById('loanRequestsList');
+                    loanRequestsList.innerHTML = ''; // Clear existing loan requests
+
+                    loanRequests.forEach(loanRequest => {
+                        const div = document.createElement('div');
+                        div.className = 'loan-request card mb-3';
+                        div.innerHTML = `
+                            <div class="card-body">
+                                <h5 class="card-title">Loan ID: ${loanRequest.id}</h5>
+                                <p class="card-text">Amount: $${loanRequest.amount}</p>
+                                <p class="card-text">Interest Rate: ${loanRequest.interestRate}%</p>
+                                <p class="card-text">Timeframe: ${loanRequest.timeframe} days</p>
+                                <p class="card-text">Status: ${loanRequest.status}</p>
+                                <button onclick="redirectToWeb3Page(${loanRequest.id})" class="btn btn-primary">Fund This Loan</button>
+
+                            </div>
+                        `;
+                        loanRequestsList.appendChild(div);
+                    });
+                } catch (error) {
+                    console.error('Error fetching loan requests:', error);
+                    alert('Error fetching loan requests. Please check console for details.');
+                }
+            }
+
+            // Call the function to load loan requests
+            fetchAndDisplayLoanRequests();
+
+            // Function to handle funding a loan (dummy function for the purpose of this example)
+            window.fundLoan = function (loanId) {
+                console.log(`Funding loan with ID: ${loanId}`);
+                // Here you would add the logic to fund the selected loan
+                // This would involve interaction with the Ethereum blockchain
+            }
+        });
+    </script>
+</body>
+
+</html>

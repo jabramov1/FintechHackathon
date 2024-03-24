@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Loan - Mock Interaction</title>
+    <style>
+        /* Add your CSS styling here */
+    </style>
+</head>
+
+<body>
+    <h2>Fund Loan - Mock Interaction</h2>
+    <p>Click the button below to simulate funding a loan. This is a mock interaction for demonstration purposes.</p>
+    <button onclick="fundLoan()">Fund Loan</button>
+
+    <script>
+        // This is a mock function to simulate funding a loan
+        function fundLoan() {
+            // Simulate retrieving the loan ID from a query parameter
+            const queryParams = new URLSearchParams(window.location.search);
+            const loanId = queryParams.get('loanId');
+
+            if (!loanId) {
+                alert("Loan ID is missing from the URL query parameters.");
+                return;
+            }
+
+            // Display a message to simulate the loan funding process
+            alert(`Simulating the funding of loan ID: ${loanId}`);
+
+            // Here you could add further logic to simulate a transaction
+            console.log(`Loan ID ${loanId} is now funded by the mock wallet.`);
+
+            // After 'funding' the loan, you could redirect or update the page content
+            // For this example, we'll just log to the console and display an alert
+            alert('The loan has been "funded" successfully.');
+        }
+    </script>
+</body>
+
+</html>
