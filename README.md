@@ -1,4 +1,4 @@
-# 💸 Smart Debt Contracts
+# Smart Debt Contracts
 
 ### Built at FintechHackathon 2025  
 Create **trustless peer-to-peer loan agreements** on the **Ethereum blockchain**, eliminating the need for lawyers, banks for large scale peer-to-peer loans.
