@@ -5,7 +5,6 @@ Create **trustless peer-to-peer loan agreements** on the **Ethereum blockchain**
 
 ---
 
-## 🌍 What It Does
 Smart Debt Contracts make it easy for two people to set up a **loan agreement** that lives on the blockchain.
 
 Example:  
