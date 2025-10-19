@@ -14,7 +14,7 @@ Example:
 
 ---
 
-## 🧩 Features
+## Features
 - ✍️ **Create Loan Agreements** – Define who owes what, when, and how.  
 - 🔒 **Immutable & Transparent** – Terms are stored on Ethereum forever.  
 - 💬 **Simple Interface** – No coding needed (concept UI).  
