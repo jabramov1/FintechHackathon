@@ -23,7 +23,7 @@ Example:
 
 ---
 
-## ⚙️ Tech Overview
+## Tech Overview
 | Part | Tool |
 |------|------|
 | Blockchain | Ethereum (Sepolia testnet) |
