@@ -33,7 +33,7 @@ Example:
 
 ---
 
-## 🧪 Current Status
+## Current Status
 This is a **prototype concept** built for a hackathon.  
 - ✅ Can define and deploy sample loan terms.  
 - 🕓 Wallet payments and automation coming next.  
